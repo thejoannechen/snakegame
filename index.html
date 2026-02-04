@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Classic Snake</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="header">
+        <h1>Snake</h1>
+        <div class="score">
+          <span>Score:</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="score">
+          <span>Speed:</span>
+          <strong id="speed">1x</strong>
+        </div>
+        <div class="score">
+          <span>Season:</span>
+          <strong id="season">Spring</strong>
+        </div>
+      </header>
+
+      <section class="game">
+        <div id="board" class="board" role="grid" aria-label="Snake game board"></div>
+        <div id="overlay" class="overlay" hidden>
+          <div class="overlay-card">
+            <h2 id="overlay-title">Game Over</h2>
+            <p id="overlay-subtitle">Press Restart to play again.</p>
+          </div>
+        </div>
+        <div id="onboarding" class="overlay overlay-onboarding">
+          <div class="overlay-card">
+            <h2>Quick Guide</h2>
+            <p id="onboarding-text">Use arrow keys or WASD to move.</p>
+            <div class="overlay-actions">
+              <button id="onboarding-skip" class="btn secondary">Skip</button>
+              <button id="onboarding-next" class="btn">Next</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="controls">
+        <div class="buttons">
+          <button id="up" class="btn" aria-label="Move up">Up</button>
+          <div class="row">
+            <button id="left" class="btn" aria-label="Move left">Left</button>
+            <button id="down" class="btn" aria-label="Move down">Down</button>
+            <button id="right" class="btn" aria-label="Move right">Right</button>
+          </div>
+        </div>
+        <div class="meta">
+          <button id="restart" class="btn secondary">Restart</button>
+          <p class="hint">Use arrow keys or WASD.</p>
+        </div>
+      </section>
+
+    </main>
+
+    <script src="./game.js"></script>
+  </body>
+</html>
